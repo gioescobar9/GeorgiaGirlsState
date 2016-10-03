@@ -1,0 +1,35 @@
+/*body { 
+  background: url(/Users/brian/Pictures/auxillary.jpg.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    background-clip: padding-box;
+}*/    
+    .form-group{
+        height: 100vh;
+        object-position: center;
+        width:65%;
+         margin:0 auto;
+    }
+
+    p{
+        text-align: center;
+    }
+
+    .button{
+        border-radius: 6px;
+        padding: 8px 22px;
+        background-color: dodgerblue;
+        color:white;
+        font-size:18px;
+    }
+    .button:hover{
+        background-color:royalblue;
+    }
+    h3{
+        text-align: center;
+        font-family: "Times New Roman", Times, serif;
+        background-color: lightgrey;
+        color:black;
+    }
