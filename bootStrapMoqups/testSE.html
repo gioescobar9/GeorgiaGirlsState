@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+/*scipt goes here*/
+    </script>
   <link rel="stylesheet" type="text/css" href="styleSheet.css">
 </head>
 
@@ -15,41 +18,39 @@
 
   <ul class="nav nav-tabs nav-justified">
   <li class="active">
-      <a href="#">Create Account</a></li>
-  <li><a href="#">Help</a></li>
-  <li><a href="#">About</a></li>
-  <li><a href="#">Contact Us</a></li>
+      <a href="testSE.html">Create School and Student Account</a></li>
+  <li><a href="records.html">View Records</a></li>
 </ul>
     
 <h1 align="center">Auxiliary Account Creation</h1>
 
-<!--<div ng-app="myApp" ng-controller="myCtrl">-->
+
 <p>
-    <form>
+    <form name="info">
 
 <div class="form-group">
     <div class="well">
     <h3> Student Information</h3>
     <label for = "firstName">First Name:</label><br>
-    <input type="text" class="form-control" id="firstName" maxlength="20"  placeholder="First Name"><br>
+    <input type="text" class="form-control" id="firstName" maxlength="20" pattern="[a-zA-Z]+" placeholder="First Name" autofocus><br>
     <label for = "lastName">Last Name: </label><br>
-    <input  type="text" class="form-control" id="lastName" maxlength="20" placeholder="Last Name"><br>
+    <input  type="text" class="form-control" id="lastName" maxlength="20" pattern="[a-zA-Z]+" placeholder="Last Name" required><br>
     <label for = "studEmail">Email Address: </label><br>
-    <input type="email" class="form-control" id="studEmail" maxlength="40" placeholder="name@example.com"<br><br>
+    <input type="email" class="form-control" id="studEmail" maxlength="40" placeholder="name@example.com" required><br><br>
 </p>
     
 <p>
     <h3>School Information</h3>
     <label for = "schoolName">School Name:</label><br>
-    <input type="text" class="form-control" id="studentSchoolName" maxlength="50" placeholder="School Name"><br>
+    <input type="text" class="form-control" id="studentSchoolName" maxlength="50" pattern="[a-zA-Z]+" placeholder="School Name"  required><br>
     <label for = "schoolEmail">School Email:</label><br>
-    <input type="email" class="form-control" id="schoolEmail" maxLength="50"  placeholder="name@example.com"><br>
+    <input type="email" class="form-control" id="schoolEmail" maxLength="50"  placeholder="name@example.com" required><br>
 </p>
         
 <p>
     <h3>Unit Information</h3>
     <label for = "unitNumber">Unit Number:</label>
-    <input type="text" class="form-control" id="unitNumber" maxlength="15" placeholder="Unit Number"><br>
+    <input type="text" class="form-control" id="unitNumber" maxlength="15" placeholder="Unit Number" required><br>
 </p>
     
 <p>
