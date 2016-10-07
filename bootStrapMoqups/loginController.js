@@ -3,13 +3,11 @@
 {
   var app =  angular.module("loginPage", []);
   
-    var loginController =  function ($scope, $location) {
+    app.controller('loginController', function($scope, $window) {
           
           $scope.goTo = function(path){
-            $location.path();
+            $window.open(path);
           };
-    };
-    
-    app.controller("loginController", loginController);
+    });
     
 }());
