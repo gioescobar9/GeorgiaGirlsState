@@ -1,31 +1,40 @@
 <!DOCTYPE html>
-<html>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<head>
-  <title>Create Account</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="styleSheet.css">
-</head>
-<h1 align="center">Create Account</h1>
-
-<!--<div ng-app="myApp" ng-controller="myCtrl">-->
-<p>
-    <form>
-
-<div class="form-group">
-    <div class="well">
-    <legend>Login</legend>
-    <label for = "Username:">Username:</label><br>
-    <input type="text" class="form-control" id="username" maxlength="20"  placeholder="Your Email"><br>
-    <label for = "password">password: </label><br>
-    <input  type="text" class="form-control" id="password" maxlength="20" placeholder="Password"><br>
-</p>
+<html ng-app = "loginPage">
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <head>
+    <title>Log In</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="loginController.js"></script>
+    <link rel="stylesheet" type="text/css" href="styleSheet.css">
+  </head>
+  <body ng-controller="loginController">
+    <h1 align="center">Log In</h1>
     
-<p>
-    <p>
-    <button type="submit" class="button btn-primary" color="white">Submit</button>
-</p>
+    <!--<div ng-app="myApp" ng-controller="myCtrl">-->
+    
+    <div class="form-group">
+        <div class="well">
+          <form ng-submit="goTo()">
+            <legend>Login</legend>
+            
+            <label for = "Username:">Username:</label><br>
+            <input type="text" class="form-control" id="username" maxlength="20"  placeholder="Your Email"><br>
+            <label for = "password">Password: </label><br>
+            <input  type="text" class="form-control" id="password" maxlength="20" placeholder="Password"><br>
+            <div class = "radioButtons">
+              <input type="radio" ng-model="loginType" value="student" name="type"/>Student
+              <input type="radio" ng-model="loginType" value="auxillary" name="type" checked="checked"/>Auxillary
+              <input type="radio" ng-model="loginType" value="school" name="type"/>School<br><br>
+              
+              <button type="submit" class="button btn-primary" color="white">Submit</button>
+              <button type="button" class="button btn-primary" color="white" ng-click = "goTo('/createAuxillaryAccount.html')">Auxillary Create Account</button>
+            </div>
+          </form>
+      </div>
+    </div>
+  </body>
+</html>

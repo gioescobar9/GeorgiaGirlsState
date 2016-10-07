@@ -15,6 +15,10 @@
         width:65%;
          margin:0 auto;
     }
+    
+    .radioButtons{
+      text-align: center;
+    }
 
     p{
         text-align: center;
@@ -26,6 +30,7 @@
         background-color: dodgerblue;
         color:white;
         font-size:18px;
+        text-align: center;
     }
     .button:hover{
         background-color:royalblue;
