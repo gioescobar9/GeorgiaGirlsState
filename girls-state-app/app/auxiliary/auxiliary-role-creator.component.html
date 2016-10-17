@@ -1,0 +1,46 @@
+    
+<h1 align="center">Auxiliary Application Init</h1>
+
+
+<div class = "row">
+    <div class = "col-md-4"></div> <!-- left most column used for spacing -->
+<div class = "col-md-4>">
+<form name="info" (ngSubmit)= "onSubmit(auxiliaryRoleCreatorForm.value)" #auxiliaryRoleCreatorForm = "ngForm">
+
+
+<div class="form-group">
+    <div class="well">
+        
+    <h3> Student Information</h3>
+    <label for = "firstName">First Name:</label><br>
+    <input type="text" name = "firstName"class="form-control" id="firstName" maxlength="20" pattern="[a-zA-Z]+" placeholder="First Name" autofocus ngControl = "firstName"><br>
+    <label for = "lastName">Last Name: </label><br>
+    <input  type="text" name = "lastName" class="form-control" id="lastName" maxlength="20" pattern="[a-zA-Z]+" placeholder="Last Name" required ngControl = "lastName"><br>
+    <label for = "studEmail">Email Address: </label><br>
+    <input type="email" name = "studEmail" class="form-control" id="studEmail" maxlength="40" placeholder="name@example.com" required ngControl = "studEmail"><br><br>
+      
+    
+                
+    <h3>School Information</h3>
+    <label for = "schoolName">School Name:</label><br>
+    <input type="text" name = "studentSchoolName" class="form-control" id="studentSchoolName" maxlength="50" pattern="[a-z A-Z]+" placeholder="School Name"  required ngControl = "studentSchoolName"><br>
+    <label for = "schoolEmail">School Email:</label><br>
+    <input type="email" name = "schoolEmail" class="form-control" id="schoolEmail" maxLength="50"  placeholder="name@example.com" required ngControl = "schoolEmail"><br>
+
+        
+
+    <h3>Unit Information</h3>
+    <label for = "unitNumber">Unit Number:</label>
+    <input type="text" name = "unitNumber" class="form-control" id="unitNumber" maxlength="15" placeholder="Unit Number" required ngControl = "unitNumber"><br>
+
+    
+
+<div class = "center-button"> <button type="submit" class="button btn-primary" color="white">Submit</button> </div>
+
+
+</div>
+</div>
+</form>
+</div><!-- ends the column for page content -->
+<div class = "col-md-4"></div><!-- right most column used for spacing -->
+</div><!-- main row for entire page -->

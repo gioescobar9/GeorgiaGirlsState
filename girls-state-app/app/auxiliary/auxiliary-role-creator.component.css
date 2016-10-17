@@ -1,0 +1,28 @@
+ .form-group{
+        height: 100vh;
+        object-position: center;
+        width:65%;
+         margin:0 auto;
+    }
+
+    .center-button{
+        text-align: center;
+    }
+
+    .button{
+    
+        border-radius: 6px;
+        padding: 8px 22px;
+        background-color: dodgerblue;
+        color:white;
+        font-size:18px;
+    }
+    .button:hover{
+        background-color:royalblue;
+    }
+    h3{
+        text-align: center;
+        font-family: "Times New Roman", Times, serif;
+        background-color: lightgrey;
+        color:black;
+    }
