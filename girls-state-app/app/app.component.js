@@ -1,4 +1,4 @@
-System.register(['angular2/core', './auxiliary/auxiliary-role-creator.component', './student/student-application.component'], function(exports_1, context_1) {
+System.register(['angular2/core', './auxiliary/auxiliary-role-creator.component', './student/student-application.component', './student/parent-consent-form.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './auxiliary/auxiliary-role-creator.component'
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, auxiliary_role_creator_component_1, student_application_component_1;
+    var core_1, auxiliary_role_creator_component_1, student_application_component_1, parent_consent_form_component_1;
     var AppComponent;
     return {
         setters:[
@@ -22,18 +22,22 @@ System.register(['angular2/core', './auxiliary/auxiliary-role-creator.component'
             },
             function (student_application_component_1_1) {
                 student_application_component_1 = student_application_component_1_1;
+            },
+            function (parent_consent_form_component_1_1) {
+                parent_consent_form_component_1 = parent_consent_form_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
-                    this.role_creator = false;
-                    this.student_app = true;
+                    this.role_creator = true;
+                    this.student_app = false;
+                    this.parent_consent = false;
                 }
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "<auxiliary-role-creator *ngIf = \"role_creator\"></auxiliary-role-creator>\n                <auxiliary-admin-login *ngIf = \"adminLogin\"></auxiliary-admin-login>\n                <student-application *ngIf = \"student_app\"></student-application>\n    ",
-                        directives: [auxiliary_role_creator_component_1.AuxiliaryRoleCreatorComponent, student_application_component_1.StudentApplicationComponent]
+                        template: "<auxiliary-role-creator *ngIf = \"role_creator\"></auxiliary-role-creator>\n                <auxiliary-admin-login *ngIf = \"adminLogin\"></auxiliary-admin-login>\n                <student-application *ngIf = \"student_app\"></student-application>\n                <parent-consent-form  *ngIf = \"parent_consent\"></parent-consent-form>\n    ",
+                        directives: [auxiliary_role_creator_component_1.AuxiliaryRoleCreatorComponent, student_application_component_1.StudentApplicationComponent, parent_consent_form_component_1.ParentConsentFormComponent]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
