@@ -13,8 +13,8 @@ import {ParentConsentFormComponent} from './student/parent-consent-form.componen
     directives: [AuxiliaryRoleCreatorComponent,StudentApplicationComponent, ParentConsentFormComponent]
 })
 export class AppComponent {
-    role_creator = true;
+    role_creator = false;
     student_app = false;
-    parent_consent = false;
+    parent_consent = true;
 
  }

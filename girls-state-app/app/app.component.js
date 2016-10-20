@@ -29,9 +29,9 @@ System.register(['angular2/core', './auxiliary/auxiliary-role-creator.component'
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
-                    this.role_creator = true;
+                    this.role_creator = false;
                     this.student_app = false;
-                    this.parent_consent = false;
+                    this.parent_consent = true;
                 }
                 AppComponent = __decorate([
                     core_1.Component({

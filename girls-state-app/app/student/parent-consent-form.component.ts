@@ -7,5 +7,8 @@ import {Component} from 'angular2/core';
 })
 
 export class ParentConsentFormComponent{
-
+    textAreasHidden = {
+        illnessInput: false,
+        treatmentInput: false
+    }
 }

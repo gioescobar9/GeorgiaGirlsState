@@ -11,32 +11,28 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var ParentConsentFormComponent;
+    var StudentLoginComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            ParentConsentFormComponent = (function () {
-                function ParentConsentFormComponent() {
-                    this.textAreasHidden = {
-                        illnessInput: false,
-                        treatmentInput: false
-                    };
+            StudentLoginComponent = (function () {
+                function StudentLoginComponent() {
                 }
-                ParentConsentFormComponent = __decorate([
+                StudentLoginComponent = __decorate([
                     core_1.Component({
-                        selector: 'parent-consent-form',
-                        templateUrl: 'app/student/parent-consent-form.component.html',
+                        selector: 'student-login',
+                        templateUrl: 'app/student/student-login.component.html',
                         styleUrls: ['app/student/student-application.component.css']
                     }), 
                     __metadata('design:paramtypes', [])
-                ], ParentConsentFormComponent);
-                return ParentConsentFormComponent;
+                ], StudentLoginComponent);
+                return StudentLoginComponent;
             }());
-            exports_1("ParentConsentFormComponent", ParentConsentFormComponent);
+            exports_1("StudentLoginComponent", StudentLoginComponent);
         }
     }
 });
-//# sourceMappingURL=parent-consent-form.component.js.map
+//# sourceMappingURL=student-login.component.js.map
