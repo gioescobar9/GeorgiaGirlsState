@@ -11,28 +11,28 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var ParentConsentFormComponent;
+    var CreateAuxiliaryAccount;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            ParentConsentFormComponent = (function () {
-                function ParentConsentFormComponent() {
+            CreateAuxiliaryAccount = (function () {
+                function CreateAuxiliaryAccount() {
                 }
-                ParentConsentFormComponent = __decorate([
+                CreateAuxiliaryAccount = __decorate([
                     core_1.Component({
-                        selector: 'parent-consent-form',
-                        templateUrl: 'app/student/parent-consent-form.component.html',
-                        styleUrls: ['app/student/student-application.component.css']
+                        selector: 'create-auxiliary-account',
+                        templateUrl: 'app/auxiliary/create-auxiliary-account.component.html',
+                        styleUrls: ['app/auxiliary/create-auxiliary-account.component.css']
                     }), 
                     __metadata('design:paramtypes', [])
-                ], ParentConsentFormComponent);
-                return ParentConsentFormComponent;
+                ], CreateAuxiliaryAccount);
+                return CreateAuxiliaryAccount;
             }());
-            exports_1("ParentConsentFormComponent", ParentConsentFormComponent);
+            exports_1("CreateAuxiliaryAccount", CreateAuxiliaryAccount);
         }
     }
 });
-//# sourceMappingURL=parent-consent-form.component.js.map
+//# sourceMappingURL=create-auxiliary-account.component.js.map
