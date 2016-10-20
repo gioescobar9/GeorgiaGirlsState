@@ -28,7 +28,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     core_1.Component({
                         selector: 'auxiliary-role-creator',
                         templateUrl: 'app/auxiliary/auxiliary-role-creator.component.html',
-                        styleUrls: ['app/auxiliary/auxiliary-role-creator.component.css']
+                        styleUrls: ['app/auxiliary/auxiliary-role-creator.component.css', 'app/student/student-application.component.css']
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AuxiliaryRoleCreatorComponent);

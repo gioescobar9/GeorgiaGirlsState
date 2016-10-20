@@ -1,3 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consent Form</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="dist/js/bootstrap-checkbox.min.js" defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styleSheet.css">
+    <script type="text/javascript">
+        function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+
+    /*jQuery used to hide the text boxes initially until yes is selected*/
+    $(document).ready(function(){
+        $("#textIllness").hide();
+    });
+
+    /* JS functions used to hide or show the input area once a selection is made*/
+        function showIllness() { $("#textIllness").show(); }
+        function hideIllness() { $("#textIllness").hide();}
+
+         $(document).ready(function(){
+        $("#textTreatment").hide();
+    });
+        function showTreatment() { $("#textTreatment").show(); }
+        function hideTreatment() { $("#textTreatment").hide(); }
+
+        $(document).ready(function(){
+        $("#textAllergies").hide();
+    });
+        function showAllergies() { $("#textAllergies").show(); }
+        function hideAllergies() { $("#textAllergies").hide(); }
+
+        $(document).ready(function(){
+        $("#textMeds").hide();
+    });
+        function showMeds() { $("#textMeds").show();}
+        function hideMeds() { $("#textMeds").hide();}
+
+        $(document).ready(function(){
+        $("#textAccomodations").hide();
+    });
+        function showAccomodations() { $("#textAccomodations").show(); }
+        function hideAccomodations() { $("#textAccomodations").hide(); }
+
+          $(document).ready(function(){
+        $("#textMeds").hide();
+    });
+
+         function showMeds() {  $("#textMeds").show();}
+        function hideMeds() { $("#textMeds").hide(); }
+
+        $(document).ready(function(){
+        $("#textRestrictions").hide();
+    });
+        function showRestrictions() { $("#textRestrictions").show(); }
+        function hideRestrictions() { $("#textRestrictions").hide(); }
+
+        $(document).ready(function(){
+        $("#textConsent").hide();
+    });
+        function showConsent() { $("#textConsent").show(); }
+        function hideConsent() { $("#textConsent").hide(); }
+
+           $(document).ready(function(){
+        $("#textCondition").hide();
+    });
+        function showCondition() { $("#textCondition").show(); }
+        function hideCondition() { $("#textCondition").hide(); }
+
+        $(document).ready(function(){
+        $(".insured").hide();
+    });
+        function showInfo() {$(".insured").show();}
+        function hideInfo() {$(".insured").hide();}
+
+     
+
+</script>
+
+</head>
 <header>
 <!-- create nav bar design, not complete yet just here for layout image-->
 <nav class="navigation">
@@ -221,6 +313,6 @@
             </div>
         </form>
     </div>
-</div>
 </body>
-
+</div>
+</html>
