@@ -11,28 +11,28 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var StudentLoginComponent;
+    var StudentSchoolLoginComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            StudentLoginComponent = (function () {
-                function StudentLoginComponent() {
+            StudentSchoolLoginComponent = (function () {
+                function StudentSchoolLoginComponent() {
                 }
-                StudentLoginComponent = __decorate([
+                StudentSchoolLoginComponent = __decorate([
                     core_1.Component({
-                        selector: 'student-login',
-                        templateUrl: 'app/student/student-login.component.html',
+                        selector: 'student-school-login',
+                        templateUrl: 'app/shared/student-school-login.component.html',
                         styleUrls: ['app/student/student-application.component.css']
                     }), 
                     __metadata('design:paramtypes', [])
-                ], StudentLoginComponent);
-                return StudentLoginComponent;
+                ], StudentSchoolLoginComponent);
+                return StudentSchoolLoginComponent;
             }());
-            exports_1("StudentLoginComponent", StudentLoginComponent);
+            exports_1("StudentSchoolLoginComponent", StudentSchoolLoginComponent);
         }
     }
 });
-//# sourceMappingURL=student-login.component.js.map
+//# sourceMappingURL=student-school-login.component.js.map
