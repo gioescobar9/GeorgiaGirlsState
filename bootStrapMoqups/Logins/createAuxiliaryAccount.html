@@ -1,0 +1,26 @@
+  </head>
+  <body>
+    <h1 align="center">Create Auxiliary User Account</h1>
+    
+    <form>
+      <div class="form-group">
+        <div class="well">
+          <legend>Create Account</legend>
+            
+            <label for = "Username:">Username:</label><br>
+            <input type="text" class="form-control" id="username" maxlength="20"  placeholder="Unit Number" pattern="\d*" title = "Username should be your Unit Number"><br>
+            
+            <label for = "password">Password: </label><br>
+            <input  type="password" class="form-control" data-ng-model="user.password" name="password" maxlength="20" placeholder="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title = "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"><br>
+
+            <label for = "password">Confirm Password: </label><br>
+            <input type="password" class="form-control" ng-model="user.password_verify" name="confirm_password" maxlength="20" placeholder="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" data-password-verify="user.password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title = "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+            <div ng-show={{false}}>Fields are not equal!</div><br>
+        
+          <p>
+            <button type="submit" class="button btn-primary" color="white">Create Account</button>
+          </p>
+        </div>
+      </div>
+    </form>
+  </body>

@@ -1,22 +1,25 @@
-  <body>
-    <h1 align="center">Auxillary Log In</h1>
-    
-    <div class="form-group">
+   <div class="heading">
+    <h1 align="center" class="loginHeader"><img src="images/emblem.jpg"><br>The American Legion Auxiliary<br>Georgia Girls State</h1>
+    <div class="logoImage"></div>
+</div>
+
+    <form>
+      <div class="form-group">
         <div class="well">
-          <form ng-submit="">
-            <legend>Login</legend>
+          <legend>Create Auxiliary Account</legend>
             
-            <label class="control-label" for="username">Username:</label><br> 
-            <input type="email" ng-model="theEmail" id="inputEmail" maxlength="20" placeholder="Email" class="form-control"><br>
-        
-            <label class="control-label" for="password">Password:</label><br>
-            <input  type="password" ng-model="thePassword" passwordValidate id="inputPassword" maxlength="20" placeholder="Password" class="form-control"><br>
+            <label for = "username:">Username:</label><br>
+            <input type="text" class="form-control" id="username" maxlength="20"  placeholder="Unit Number" pattern="\d*"><br>
             
-              <div class = "logInButtons">
-              <button type="submit" class="button btn-primary" color="white">Submit</button>
-              <button type="button" class="button btn-primary" color="white" ng-click = "">Create Auxillary Account</button>
-            </div>
-          </form>
+            <label for = "password">Password: </label><br>
+            <input  type="password"  id ="password"class="form-control" maxlength="20" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><br>
+
+            <label for = "confirm-password">Confirm Password: </label><br>
+            <input type="password" id = "confirm-password" class="form-control" maxlength="20" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" >
+        <br>
+          <p>
+            <button type="submit" class="button btn-primary" color="white">Create Account</button>
+          </p>
+        </div>
       </div>
-    </div>
-  </body>
+    </form>

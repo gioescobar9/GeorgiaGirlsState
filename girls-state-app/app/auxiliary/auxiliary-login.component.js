@@ -11,28 +11,28 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var CreateAuxiliaryAccountComponent;
+    var AuxiliaryLoginComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            CreateAuxiliaryAccountComponent = (function () {
-                function CreateAuxiliaryAccountComponent() {
+            AuxiliaryLoginComponent = (function () {
+                function AuxiliaryLoginComponent() {
                 }
-                CreateAuxiliaryAccountComponent = __decorate([
+                AuxiliaryLoginComponent = __decorate([
                     core_1.Component({
-                        selector: 'create-auxiliary-account',
-                        templateUrl: 'app/auxiliary/create-auxiliary-account.component.html',
+                        selector: 'auxiliary-login',
+                        templateUrl: 'app/auxiliary/auxiliary-login.component.html',
                         styleUrls: ['app/auxiliary/create-auxiliary-account.component.css', 'app/student/student-application.component.css']
                     }), 
                     __metadata('design:paramtypes', [])
-                ], CreateAuxiliaryAccountComponent);
-                return CreateAuxiliaryAccountComponent;
+                ], AuxiliaryLoginComponent);
+                return AuxiliaryLoginComponent;
             }());
-            exports_1("CreateAuxiliaryAccountComponent", CreateAuxiliaryAccountComponent);
+            exports_1("AuxiliaryLoginComponent", AuxiliaryLoginComponent);
         }
     }
 });
-//# sourceMappingURL=create-auxiliary-account.component.js.map
+//# sourceMappingURL=auxiliary-login.component.js.map

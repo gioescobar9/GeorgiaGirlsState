@@ -37,7 +37,7 @@
         text-align: center;
     }
     .button:hover{
-        background-color:royalblue;
+        border-color:royalblue;
     }
     h3{
         text-align: center;
