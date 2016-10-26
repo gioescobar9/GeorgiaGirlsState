@@ -3,7 +3,7 @@
     <div class="logoImage"></div>
 </div>
 
-    <form>
+    <form #f = "ngForm" (ngSubmit)= "onSubmit(f.value)">
       <div class="form-group">
         <div class="well">
           <legend>Create Auxiliary Account</legend>

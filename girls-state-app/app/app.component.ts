@@ -5,6 +5,8 @@ import {ParentConsentFormComponent} from './student/parent-consent-form.componen
 import {StudentSchoolLoginComponent} from './shared/student-school-login.component';
 import {CreateAuxiliaryAccountComponent} from './auxiliary/create-auxiliary-account.component';
 import{AuxiliaryLoginComponent} from './auxiliary/auxiliary-login.component';
+import{SchoolApplicationComponent} from './school/school-application.component';
+import{AuxiliaryApplicationComponent} from './auxiliary/auxiliary-application.component';
 
 @Component({
     selector: 'my-app',
@@ -16,19 +18,23 @@ import{AuxiliaryLoginComponent} from './auxiliary/auxiliary-login.component';
                     <li [class.active] = "viewMode == 'student_login'"><a (click) = "viewMode = 'student_login'">Student Login</a></li>
                     <li [class.active] = "viewMode == 'student_app'"><a (click) = "viewMode = 'student_app'"> Student Application</a></li>
                     <li [class.active] = "viewMode == 'parent_consent'"><a (click) = "viewMode = 'parent_consent'"> Parent Consent</a></li>
+                    <li [class.active] = "viewMode == 'school_application'"><a (click) = "viewMode = 'school_application'">School Application</a></li>
+                    <li [class.active] = "viewMode == 'auxiliary_application'"><a (click) = "viewMode = 'auxiliary_application'">Auxiliary Application</a></li>
                 </ul>
 
                  <div [ngSwitch] = "viewMode">
-                    <template [ngSwitchWhen] = "'create_auxiliary'" ngSwitchDefault><create-auxiliary-account></create-auxiliary-account></template>
-                    <template [ngSwitchWhen] = "'auxiliary_login'"><auxiliary-login></auxiliary-login></template>
-                    <template [ngSwitchWhen] = "'role_creator'" ngSwitchDefault><auxiliary-role-creator></auxiliary-role-creator></template>
-                    <template [ngSwitchWhen] = "'student_login'" ngSwitchDefault><student-school-login></student-school-login></template>
-                    <template [ngSwitchWhen] = "'student_app'" ngSwitchDefault><student-application></student-application></template>
-                    <template [ngSwitchWhen] = "'parent_consent'" ngSwitchDefault><parent-consent-form></parent-consent-form></template>
+                    <template  [ngSwitchWhen] = "'create_auxiliary'" ngSwitchDefault><create-auxiliary-account></create-auxiliary-account></template>
+                    <template  [ngSwitchWhen] = "'auxiliary_login'"><auxiliary-login></auxiliary-login></template>
+                    <template  [ngSwitchWhen] = "'role_creator'" ngSwitchDefault><auxiliary-role-creator></auxiliary-role-creator></template>
+                    <template  [ngSwitchWhen] = "'student_login'" ngSwitchDefault><student-school-login></student-school-login></template>
+                    <template  [ngSwitchWhen] = "'student_app'" ngSwitchDefault><student-application></student-application></template>
+                    <template  [ngSwitchWhen] = "'parent_consent'" ngSwitchDefault><parent-consent-form></parent-consent-form></template>
+                    <template  [ngSwitchWhen] = "'school_application'" ngSwitchDefault><school-application></school-application></template>
+                    <template  [ngSwitchWhen] = "'auxiliary_application'" ngSwitchDefault><auxiliary-application></auxiliary-application></template>
                 </div>
     `,
     directives: [AuxiliaryRoleCreatorComponent,StudentApplicationComponent, ParentConsentFormComponent,
-     StudentSchoolLoginComponent, CreateAuxiliaryAccountComponent, AuxiliaryLoginComponent]
+     StudentSchoolLoginComponent, CreateAuxiliaryAccountComponent, AuxiliaryLoginComponent,SchoolApplicationComponent, AuxiliaryApplicationComponent]
 })
 export class AppComponent {
     viewMode = "create_auxiliary";
