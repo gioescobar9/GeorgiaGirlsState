@@ -3,19 +3,22 @@
     <div class="logoImage"></div>
 </div>
 
-    <form #f = "ngForm" (ngSubmit)= "onSubmit(f.value)">
+    <form [ngFormModel] = "form">
       <div class="form-group">
         <div class="well">
           <legend>Create Auxiliary Account</legend>
             
             <label for = "username:">Username:</label><br>
-            <input type="text" class="form-control" id="username" maxlength="20"  placeholder="Unit Number" pattern="\d*"><br>
+            <input type="text" class="form-control" id="username"  placeholder="Unit Number" 
+            pattern="\d*" ngControl = "username"><br>
             
             <label for = "password">Password: </label><br>
-            <input  type="password"  id ="password"class="form-control" maxlength="20" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><br>
+            <input  type="password"  id ="password"class="form-control" 
+             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" ngControl = "password"><br>
 
-            <label for = "confirm-password">Confirm Password: </label><br>
-            <input type="password" id = "confirm-password" class="form-control" maxlength="20" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" >
+            <label for = "confirm_password">Confirm Password: </label><br>
+            <input type="password" id = "confirm-_password" class="form-control" 
+             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" ngControl = "confirm_password">
         <br>
           <p>
             <button type="submit" class="button btn-primary" color="white">Create Account</button>
