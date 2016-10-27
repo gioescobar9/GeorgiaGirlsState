@@ -3,7 +3,7 @@
     <div class="logoImage"></div>
 </div>
 
-    <form [ngFormModel] = "form" >
+    <form [ngFormModel] = "form" (ngSubmit) = "signup()" >
       <div class="form-group">
         <div class="well">
           <legend>Create Auxiliary Account</legend>
@@ -14,11 +14,11 @@
             
             <label for = "password">Password: </label><br>
             <input  type="password"  id ="password"class="form-control" 
-             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" ngControl = "password"><br>
+              ngControl = "password"><br>
 
             <label for = "confirm_password">Confirm Password: </label><br>
             <input type="password" id = "confirm-_password" class="form-control" 
-             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" ngControl = "confirm_password">
+              ngControl = "confirm_password">
         <br>
           <p>
             <button type="submit" class="button btn-primary" color="white">Create Account</button>
