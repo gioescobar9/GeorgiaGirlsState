@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/common', '../auxiliaryValidators.ts'], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/common', './auxValidators'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,8 +10,14 @@ System.register(['angular2/core', 'angular2/common', '../auxiliaryValidators.ts'
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, common_1, auxiliaryValidators_ts_1;
+    var core_1, common_1, auxValidators_1;
     var CreateAuxiliaryAccountComponent;
+    function equalValidator(_a) {
+        var value = _a.value;
+        var _b = Object.keys(value || {}), first = _b[0], rest = _b.slice(1);
+        var valid = rest.every(function (v) { return value[v] === value[first]; });
+        return valid ? null : { equal: true };
+    }
     return {
         setters:[
             function (core_1_1) {
@@ -20,16 +26,21 @@ System.register(['angular2/core', 'angular2/common', '../auxiliaryValidators.ts'
             function (common_1_1) {
                 common_1 = common_1_1;
             },
-            function (auxiliaryValidators_ts_1_1) {
-                auxiliaryValidators_ts_1 = auxiliaryValidators_ts_1_1;
+            function (auxValidators_1_1) {
+                auxValidators_1 = auxValidators_1_1;
             }],
         execute: function() {
             CreateAuxiliaryAccountComponent = (function () {
                 function CreateAuxiliaryAccountComponent() {
                     this.form = new common_1.ControlGroup({
-                        username: new common_1.Control('', common_1.Validators.compose([common_1.Validators.required, auxiliaryValidators_ts_1.AuxiliaryValidators.isAllNumbers])),
-                        password: new common_1.Control('', common_1.Validators.required),
-                        confirm_password: new common_1.Control('', common_1.Validators.required)
+                        username: new common_1.Control('', common_1.Validators.compose([
+                            common_1.Validators.required,
+                            auxValidators_1.AuxValidators.containsAllNumbers
+                        ])),
+                        passwordGroup: new common_1.ControlGroup({
+                            password: new common_1.Control('', common_1.Validators.required),
+                            confirm_password: new common_1.Control('', common_1.Validators.required)
+                        }, {}, equalValidator)
                     });
                 }
                 CreateAuxiliaryAccountComponent.prototype.signup = function () {
